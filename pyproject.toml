@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "polako-weather"
+version = "0.1.0"
+description = "This is a FastAPI service that provides weather forecasts"
+authors = ["ValentinaDrozdova <n.gr.11.03.01@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.115.0"
+uvicorn = "^0.30.0"
+httpx = "^0.28.0"
+pydantic-settings = "^2.4.0"
+aiocache = "^0.12.3"
+slowapi = "^0.1.9"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+pytest-asyncio = "^0.21.1"
+pytest-mock = "^3.15.1"
+ruff = "^0.14.11"
+mypy = "^1.19.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 110
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "C4", "ARG"]
+ignore = ["B008"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+ignore_missing_imports = true
+plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_defs = false
+check_untyped_defs = false

@@ -1,0 +1,6 @@
+*$py.class
+.venv/
+venv/
+.env
+.pytest_cache/
+.DS_Store
