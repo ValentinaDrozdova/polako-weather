@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "polako-weather"
-version = "0.1.0"
+version = "0.1.1"
 description = "This is a FastAPI service that provides weather forecasts"
 authors = ["ValentinaDrozdova <n.gr.11.03.01@gmail.com>"]
 readme = "README.md"
@@ -14,6 +14,7 @@ httpx = "^0.28.0"
 pydantic-settings = "^2.4.0"
 aiocache = "^0.12.3"
 slowapi = "^0.1.9"
+timezonefinder = "^8.2.1"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.0.0"
