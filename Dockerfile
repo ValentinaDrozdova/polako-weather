@@ -1,5 +1,8 @@
 FROM python:3.12-slim
 
+ARG COMMIT_HASH=unknown
+ENV COMMIT_HASH=${COMMIT_HASH}
+
 WORKDIR /code
 
 COPY pyproject.toml poetry.lock* /code/
